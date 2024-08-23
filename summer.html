@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Each card will take up full width of its section */
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .card p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        /* Image Card for the Third Section */
+        .image-card {
+            background-color: transparent; /* No background color */
+            padding: 0; /* No padding for the image card */
+        }
+
+        .image-card img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow box for the image */
+        }
+    </style>
+</head>
+<body>
+    <h1>Summer</h1>
+    <div class="container">
+        <!-- First Section: Awesome Thing -->
+        <div class="card">
+            <h2>ONE AWESOME THING I DID THIS SUMMER WAS:</h2>
+            <p>I went to Disney World</p>
+        </div>
+
+        <!-- Second Section: Favorite Memory -->
+        <div class="card">
+            <h2>MY FAVORITE MEMORY FROM THIS SUMMER WAS:</h2>
+            <p>My parent's wedding</p>
+        </div>
+
+        <!-- Third Section: Wedding Picture -->
+        <div class="card image-card">
+            <img src="images/summer.jpg" alt="Summer Memory">
+        </div>
+    </div>
+</body>
+</html>

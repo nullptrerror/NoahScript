@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* First Section (2/3 Width) */
+        .favorites-list {
+            width: 66%; /* Take up 2/3 of the container width */
+        }
+
+        .favorites-list .row {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .favorites-list .row span {
+            font-weight: bold;
+            color: #61dafb;
+        }
+
+        /* Second Section (1/3 Width) */
+        .favorites-card {
+            width: 33%; /* Take up 1/3 of the container width */
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .favorites-card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .favorites-card p {
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favorites</h1>
+    <div class="container">
+        <!-- First Section: Favorites List -->
+        <div class="favorites-list">
+            <div class="row">
+                <span>MY FAVORITE SPORT:</span> Soccer
+            </div>
+            <div class="row">
+                <span>MY FAVORITE MOVIE:</span> Deadpool
+            </div>
+            <div class="row">
+                <span>MY FAVORITE SINGER:</span> Yeat
+            </div>
+            <div class="row">
+                <span>MY FAVORITE FOOD:</span> Colombian
+            </div>
+        </div>
+
+        <!-- Second Section: Favorite Thing About Myself -->
+        <div class="favorites-card">
+            <h2>MY FAVORITE THING ABOUT MYSELF IS...</h2>
+            <p>I'm Persistent</p>
+        </div>
+    </div>
+</body>
+</html>

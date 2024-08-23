@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Selfie Card */
+        .selfie-card {
+            width: 66%; /* Take up 66% of the container width */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .selfie-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Description Card */
+        .description-card {
+            width: 32%; /* Take up the remaining width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .description-card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .description-card ol {
+            padding-left: 20px;
+            font-size: 20px;
+            list-style-type: decimal; /* Numbered list */
+        }
+    </style>
+</head>
+<body>
+    <h1>Selfie!</h1>
+    <div class="container">
+        <div class="card selfie-card">
+            <img src="images/selfie.jpg" alt="Selfie">
+        </div>
+        <div class="card description-card">
+            <h2>3 WORDS THAT BEST DESCRIBE ME:</h2>
+            <ol>
+                <li>Short</li>
+                <li>Impatient</li>
+                <li>Determined</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items closer to the top */
+            height: 100vh; /* Full viewport height */
+            box-sizing: border-box;
+            padding-top: 10vh; /* Add a little space at the top */
+        }
+
+        /* Container for centering content */
+        .container {
+            text-align: center;
+            height: auto; /* Adjust height to fit content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 146px;
+            color: #61dafb;
+        }
+
+        /* Material Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 40px; /* Extra padding for the card */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            margin: 0 auto; /* Center the card */
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 54px;
+            color: #61dafb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ALL ABOUT ME!</h1>
+        <div class="card">
+            <h2>Matias Miranda</h2>
+        </div>
+    </div>
+</body>
+</html>

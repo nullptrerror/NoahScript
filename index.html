@@ -1,0 +1,278 @@
+<!DOCTYPE html> <!-- Tells Chrome it's an html5 document and to treat it as such -->
+<html lang="en"> <!-- html tag that begins html5 documents and a language tag of english  -->
+<head> <!-- Section for meta tags, styles, title and other things for more advanved websites -->
+    <meta charset="UTF-8"> <!-- Byte to character representation -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Lets the browser know how to display website scale correctly -->
+    <title>Matias' Website</title>  <!-- Title of the tab bar -->
+    <style> /* Style tags allow you to decorate website html elements, allows you to import fonts and images */
+        /* Custom Font Definition */
+        @font-face { /* Allows for custom font imports */
+            font-family: 'Super Funky'; /* allows you to give the imported font a name */
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype'); /* allows you to import a font like a picture via file reference */
+            font-weight: normal;
+            font-style: normal; /* allows you to set to italics */
+        }
+
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e2d; /* Dark background */
+            color: #ffffff; /* White text */
+            margin: 0;
+            display: flex; /* Help for displaying things */
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Prevent body scrolling */
+        }
+
+        /* Sidebar Navigation */
+        nav {
+            width: 250px; /* Fixed width for sidebar */
+            background-color: #34354a; /* Sidebar background */
+            padding: 20px;
+            display: flex; /* expirement until it looks good */
+            flex-direction: column; /* expirement until it looks good */
+            flex-shrink: 0; /* Prevent shrinking */
+            overflow-y: auto; /* Scroll if content overflows */
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2); /* Stronger shadow to the right of the nav */
+            z-index: 1; /* Ensure nav is on top of other content */
+            font-family: 'Super Funky', sans-serif; /* Apply custom font to navigation */
+        }
+
+        nav a {
+            color: #61dafb; /* Link color */
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 18px;
+            padding: 10px;
+            transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+            border-radius: 5px; /* Slight rounding of corners */
+        }
+
+        nav a.active {
+            color: #ffffff; /* Highlight the active link */
+            background-color: #50526e; /* Background color for active link */
+        }
+
+        nav a:hover {
+            color: #ffffff; /* Change color on hover */
+            background-color: #50526e; /* Background color change on hover */
+        }
+
+        /* Play Button Styles */
+        .play-button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #50526e;
+            color: #ffffff;
+            font-size: 18px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .play-button:hover {
+            background-color: #61dafb;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex: 1; /* Take up remaining space */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden; /* Prevent content overflow */
+            position: relative; /* Ensure content is properly layered */
+        }
+
+        /* Header Section */
+        header {
+            padding: 20px;
+            background-color: #28293d; /* Header background */
+            text-align: center;
+            font-size: 28px;
+            font-family: 'Super Funky', sans-serif; /* Apply custom font to navigation */
+            color: #61dafb; /* Header text color */
+            flex-shrink: 0; /* Prevent shrinking */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow below the header */
+            z-index: 1; /* Make sure the header shadow is above the iframe */
+        }
+
+        /* Iframe Section */
+        iframe {
+            flex: 1; /* magic property to make things look good in all screen sizes */
+            border: none; /* remove the border */
+            width: 100%;
+            height: 100%;
+            background-color: #1e1e2d; /* Match body background */
+            z-index: 0; /* Ensure the iframe doesn't overlap header shadow */
+            opacity: 0; /* Start invisible */
+            transition: opacity 0.5s ease-in-out; /* Smooth fade-in and fade-out */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            nav {
+                width: 200px;
+            }
+
+            nav a {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            header {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                flex-direction: row;
+                overflow-x: auto;
+                overflow-y: hidden;
+            }
+
+            nav a {
+                margin: 0 10px;
+                white-space: nowrap;
+            }
+
+            .main-content {
+                margin-top: 60px; /* Space for horizontal nav */
+            }
+
+            header {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <nav>
+        <a href="#allaboutme" onclick="stopSlideshow(); loadPage('allaboutme.html', this)">All About Me</a>
+        <a href="#selfie" onclick="stopSlideshow(); loadPage('selfie.html', this)">Selfie</a>
+        <a href="#hobbies" onclick="stopSlideshow(); loadPage('hobbies.html', this)">Hobbies</a>
+        <a href="#family" onclick="stopSlideshow(); loadPage('family.html', this)">Family</a>
+        <a href="#books" onclick="stopSlideshow(); loadPage('books.html', this)">Books</a>
+        <a href="#favorites" onclick="stopSlideshow(); loadPage('favorites.html', this)">Favorites</a>
+        <a href="#summer" onclick="stopSlideshow(); loadPage('summer.html', this)">Summer</a>
+        <a href="#ifiwere" onclick="stopSlideshow(); loadPage('ifiwere.html', this)">If I Were</a>
+        <a href="#future" onclick="stopSlideshow(); loadPage('future.html', this)">Future</a>
+        <a href="#goals" onclick="stopSlideshow(); loadPage('goals.html', this)">Goals</a>
+        <a href="#notetomyteacher" onclick="stopSlideshow(); loadPage('notetomyteacher.html', this)">Note to My Teacher</a>
+        <a href="#thanks" onclick="stopSlideshow(); loadPage('thanks.html', this)">Thanks</a>
+        <div class="play-button" onclick="toggleSlideshow()">Play Slideshow</div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <header>
+            Welcome to Matias' Website
+        </header>
+        <iframe id="content-frame"></iframe>
+    </div>
+
+    <!-- JavaScript for Iframe Loading, Fade Effects, and Slideshow -->
+    <script>
+        let slideshowInterval;
+        let isSlideshowRunning = false;
+
+        function loadPage(page, element) {
+            const iframe = document.getElementById('content-frame');
+            iframe.style.opacity = 0; // Fade out
+
+            setTimeout(() => {
+                iframe.src = page; // thanks.html
+                iframe.onload = () => {
+                    iframe.style.opacity = 1; // Fade in after load
+                };
+            }, 500); // Wait for the fade-out to complete
+          
+            // Remove 'active' class from all links
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => link.classList.remove('active'));
+
+            // Add 'active' class to the clicked link
+            element.classList.add('active');
+        }
+
+        function highlightCurrentMenu() {
+            const hash = window.location.hash || '#allaboutme';
+            const page = hash.substring(1) + '.html';
+            const iframe = document.getElementById('content-frame');
+            iframe.style.opacity = 0; // Start with fade-out effect
+
+            setTimeout(() => {
+                iframe.src = page;
+                iframe.onload = () => {
+                    iframe.style.opacity = 1; // Fade in after load
+                };
+            }, 500); // Wait for the fade-out to complete
+
+            const links = document.querySelectorAll('nav a');
+            links.forEach(link => {
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        function toggleSlideshow() {
+            if (isSlideshowRunning) {
+                stopSlideshow();
+            } else {
+                startSlideshow();
+            }
+        }
+
+        function startSlideshow() {
+            const links = Array.from(document.querySelectorAll('nav a'));
+            let currentIndex = links.findIndex(link => link.classList.contains('active'));
+
+            if (currentIndex === -1) {
+                currentIndex = 0;
+            }
+
+            slideshowInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % links.length;
+
+                if (links[currentIndex].getAttribute('href') === '#thanks') {
+                    stopSlideshow();
+                }
+
+                loadPage(links[currentIndex].getAttribute('href').substring(1) + '.html', links[currentIndex]);
+                window.location.hash = links[currentIndex].getAttribute('href');
+            }, 7000); // Change page every 7 seconds
+
+            document.querySelector('.play-button').textContent = 'Stop Slideshow';
+            isSlideshowRunning = true;
+        }
+
+        function stopSlideshow() {
+            clearInterval(slideshowInterval);
+            document.querySelector('.play-button').textContent = 'Play Slideshow';
+            isSlideshowRunning = false;
+        }
+
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.substring(1) + '.html';
+            loadPage(hash, document.querySelector(`nav a[href="#${hash.split('.')[0]}"]`));
+        });
+
+        window.addEventListener('DOMContentLoaded', () => { // When pagel loads run this
+            highlightCurrentMenu();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Each card will take up full width of its section */
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .card p {
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>GOALS</h1>
+    <div class="container">
+        <!-- First Section: Overall School Goal -->
+        <div class="card">
+            <h2>MY OVERALL GOAL FOR THIS SCHOOL YEAR IS:</h2>
+            <p>To pass I.T. class</p>
+        </div>
+
+        <!-- Second Section: How to Achieve the Goal -->
+        <div class="card">
+            <h2>I THINK I CAN ACHIEVE THIS GOAL IF I:</h2>
+            <p>Practice every week</p>
+        </div>
+
+        <!-- Third Section: Personal Goal Outside of School -->
+        <div class="card">
+            <h2>A PERSONAL GOAL I HAVE FOR MYSELF OUTSIDE OF SCHOOL IS:</h2>
+            <p>Learning to make better macros</p>
+        </div>
+    </div>
+</body>
+</html>

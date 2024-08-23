@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+
+        /* Hobby Image Section */
+        .hobby-image {
+            width: 33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hobby-image img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Text Sections */
+        .text-section {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .text-section p {
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hobbies</h1>
+    <div class="container">
+        <!-- First Section: Favorite Hobby -->
+        <div class="card text-section">
+            <h2>MY FAVORITE HOBBY IS:</h2>
+            <p>Is playing online video games.</p>
+        </div>
+
+        <!-- Middle Section: Hobby Image -->
+        <div class="hobby-image">
+            <img src="images/hobby.webp" alt="Favorite Hobby">
+        </div>
+
+        <!-- Last Section: Why It's My Favorite -->
+        <div class="card text-section">
+            <h2>THIS IS MY FAVORITE HOBBY BECAUSE:</h2>
+            <p>I just like playing with my friends.</p>
+        </div>
+    </div>
+</body>
+</html>
