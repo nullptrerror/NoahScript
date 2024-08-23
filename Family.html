@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+
+        /* Left Section */
+        .left-section {
+            width: 50%; /* Take up 50% of the container width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .left-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .left-section p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        /* Right Section */
+        .right-section {
+            width: 50%; /* Take up 50% of the container width */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .right-section .row {
+            margin-bottom: 20px;
+        }
+
+        .right-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .right-section p {
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Family</h1>
+    <div class="container">
+        <!-- Left Section: Names of Family Members -->
+        <div class="card left-section">
+            <h2>THE NAMES OF SOME PEOPLE IN MY FAMILY ARE:</h2>
+            <p>Caleb, Lillian, Emilia, Matias, Priscilla, and Link</p>
+        </div>
+
+        <!-- Right Section: Two Rows -->
+        <div class="right-section">
+            <!-- First Row: One Word to Describe Family -->
+            <div class="card row">
+                <h2>ONE WORD TO DESCRIBE MY FAMILY IS:</h2>
+                <p>Creative</p>
+            </div>
+
+            <!-- Second Row: The Best Thing About My Family -->
+            <div class="card row">
+                <h2>THE BEST THING ABOUT MY FAMILY IS:</h2>
+                <p>They are helpful.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            flex: 1;
+        }
+
+        /* First Section */
+        .first-section {
+            width: 33%; /* Take up 33% of the container width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .first-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .first-section p {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        /* Second Section: Book Image */
+        .book-image {
+            width: 33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .book-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow box for the image */
+        }
+
+        /* Third Section */
+        .third-section {
+            width: 33%; /* Take up 33% of the container width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .third-section h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .third-section p {
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Books</h1>
+    <div class="container">
+        <!-- First Section: Best Book -->
+        <div class="card first-section">
+            <h2>THE BEST BOOK I'VE EVER READ IS:</h2>
+            <p>"One of Us Is Lying" by Karen M. McManus</p>
+        </div>
+
+        <!-- Second Section: Book Image -->
+        <div class="book-image">
+            <img src="images/book.jpg" alt="Best Book">
+        </div>
+
+        <!-- Third Section: Reading Goal -->
+        <div class="card third-section">
+            <h2>THIS YEAR, I HOPE TO READ MORE BOOKS ABOUT:</h2>
+            <p>Drama and Murder</p>
+        </div>
+    </div>
+</body>
+</html>

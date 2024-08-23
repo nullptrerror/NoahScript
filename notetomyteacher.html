@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Custom Font Definition */
+        @font-face {
+            font-family: 'Super Funky';
+            src: url('./fonts/super-funky-font/SuperFunky-lgmWw.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Apply the custom font */
+        body {
+            font-family: 'Super Funky', sans-serif;
+            color: #ffffff;
+            background-color: transparent; /* Ensure background blends with parent */
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: #61dafb;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* Flexbox Container for Layout */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #34354a;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Left Section */
+        .left-section {
+            width: 33%; /* Take up 1/3 of the container width */
+        }
+
+        /* Right Section */
+        .right-section {
+            width: 66%; /* Take up 2/3 of the container width */
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #61dafb;
+        }
+
+        .card p {
+            font-size: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>GOALS</h1>
+    <div class="container">
+        <!-- Left Section: One Thing I'd Like My Teacher to Know -->
+        <div class="card left-section">
+            <h2>ONE THING I'D REALLY LIKE FOR MY TEACHER TO KNOW ABOUT ME IS:</h2>
+        </div>
+
+        <!-- Right Section: Personal Message to Teacher -->
+        <div class="card right-section">
+            <p>I look forward to learning more about coding! Thank you for teaching me my I.T. class!</p>
+        </div>
+    </div>
+</body>
+</html>
